@@ -1,0 +1,15 @@
+function dy=Quad_SpeedEquation(x,y,p)%p(1)ÊÇ
+dy=zeros(3,1);
+u1=p(1);
+psai=p(2);
+fai=p(3);
+sita=p(4);
+m=p(5);
+g=p(6);
+mg=m*g;
+dVx=u1*(sin(psai)*sin(fai)+cos(psai)*cos(fai)*sin(sita));
+dVy=u1*(cos(psai)*sin(sita)*sin(fai)-sin(psai)*cos(fai);
+dVz=u1*(cos(sita)*cos(psai))-mg;
+dy(1)=dVx;
+dy(2)=dVy;
+dy(3)=dVz;
